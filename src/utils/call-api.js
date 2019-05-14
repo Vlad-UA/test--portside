@@ -15,8 +15,5 @@ export default function callApi(url) {
         return response;
       }
     })
-    .then(response => response.json())
-    .then(json => {
-      console.log('json', json);
-      return json});
+    .then(response => response.json());
 }

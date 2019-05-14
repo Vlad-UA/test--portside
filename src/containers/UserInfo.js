@@ -6,10 +6,10 @@ import { bindActionCreators } from 'redux';
 import UserInfo from '../components/UserInfo';
 
 // Actions
-import { getUserInfo } from '../actions/users';
+import { getUserInfo } from '../actions/userInfo';
 
 const mapStateToProps = state => ({
-  userData: state.userData,
+  userInfo: state.userInfo,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(

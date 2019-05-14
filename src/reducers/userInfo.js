@@ -6,9 +6,9 @@ const initialState = {};
 export default (state = initialState, action) => {
   switch (action.type) {
     case getUserInfoConstants.GET_USER_INFO_SUCCESS:
-
-      console.log('action.payload', action.payload);
       return { ...action.payload };
+    case getUserInfoConstants.GET_USER_INFO_REQUEST:
+      return { ...initialState };
     default:
       return state;
   }

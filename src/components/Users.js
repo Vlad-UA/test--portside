@@ -1,14 +1,7 @@
 // Core
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
-
-// Utils
-
-// Components
-
-// Constants
-
-// Instruments
+import PropTypes from 'prop-types';
 
 export default class Users extends PureComponent {
   async componentDidMount() {
@@ -20,8 +13,6 @@ export default class Users extends PureComponent {
   render() {
     const { users } = this.props;
 
-    console.log('users__', users);
-
     return (
       <>
         {users.map(({ name, id }) => <div key={id}><Link to={`/user/${id}`}>{name}</Link></div>)}
@@ -29,3 +20,13 @@ export default class Users extends PureComponent {
     );
   }
 }
+
+Users.propTypes = {
+  getUsers: PropTypes.func.isRequired,
+  users: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      id: PropTypes.number,
+    }),
+  ).isRequired,
+};

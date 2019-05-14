@@ -1,1 +1,1 @@
-export default URL = 'https://jsonplaceholder.typicode.com/users';
+export const URL = 'https://jsonplaceholder.typicode.com/users';
